@@ -1,0 +1,19 @@
+.text-logo {
+    font: var(--font-logo);
+}
+
+.text-heading {
+    font: var(--font-heading-md);
+}
+
+.text-heading {
+    font: var(--font-body-md);
+}
+
+.color-accent-pink {
+    color: var(--accent-pink);
+}
+
+.color-text-body {
+    color: var(--text-body);
+}

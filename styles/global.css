@@ -39,7 +39,7 @@
     --ff-header: "Baloo 2", serif;
     --ff-body: "Open Sans", serif;
 
-    --font-logo: 2.5rem var(--ff-logo);
+    --font-logo: 2.5rem/135% var(--ff-logo);
     
     --font-heading-md: bold 1.75rem var(--ff-header);
     --font-heading-sm: bold 1.125rem var(--ff-header);
@@ -48,4 +48,49 @@
     --font-body-sm: .875rem var(--ff-body);
     --font-body-xs: .75rem var(--ff-body);
 
+}
+
+body {
+    background-color: var(--shape-background);
+
+    font: var(--font-body-md);
+    color: var(--text-body);
+}
+
+#app {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 1.25rem;
+
+    overflow: hidden;
+    padding: 1.25rem;
+}
+
+aside {
+    background: url(../assets/images/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    padding: 2rem;
+    border-radius: 12px;
+
+    img {
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        margin-bottom: .25rem;
+    }
+
+    span {
+        line-height: 1.375rem;
+    }
+}
+
+main {
+    background: var(--shape-body);
+    overflow: auto;
+    border-radius: 12px;
 }
