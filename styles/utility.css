@@ -2,11 +2,11 @@
     font: var(--font-logo);
 }
 
-.text-heading {
+.text-heading-md {
     font: var(--font-heading-md);
 }
 
-.text-heading {
+.text-body-md {
     font: var(--font-body-md);
 }
 

@@ -59,7 +59,7 @@ body {
 
 #app {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 1.25rem;
 
     overflow: hidden;
