@@ -17,3 +17,63 @@
 .color-text-body {
     color: var(--text-body);
 }
+
+.color-text-heading {
+    color: var(--text-heading);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.bg-brand-light {
+    background-color: var(--brand-light);
+}
+
+.bg-accent-purple {
+    background-color: var(--accent-purple);
+}
+
+.bg-accent-fuschia {
+    background-color: var(--accent-fuschia);
+}
+
+.bg-accent-pink {
+    background-color: var(--accent-pink);
+}
+
+.bg-accent-orange {
+    background-color: var(--accent-orange);
+}
+
+.bg-accent-yellow {
+    background-color: var(--accent-yellow);
+}
+
+.bg-accent-lime {
+    background-color: var(--accent-lime);
+}
+
+.bg-accent-green {
+    background-color: var(--accent-green);
+}
+
+.bg-accent-cyan {
+    background-color: var(--accent-cyan);
+}
+
+.bg-accent-navy {
+    background-color: var(--accent-navy);
+}
+
+.bg-feedback-danger {
+    background-color: var(--feedback-danger);
+}

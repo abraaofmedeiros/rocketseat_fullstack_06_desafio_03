@@ -62,7 +62,9 @@ body {
     grid-template-columns: 1fr 2fr;
     gap: 1.25rem;
 
+    height: 100vh;
     overflow: hidden;
+    
     padding: 1.25rem;
 }
 
@@ -71,7 +73,6 @@ aside {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
 
     padding: 2rem;
     border-radius: 12px;
@@ -93,4 +94,14 @@ main {
     background: var(--shape-body);
     overflow: auto;
     border-radius: 12px;
+
+    h2 {
+        margin-bottom: 2.5rem;
+    }
+
+    #main-wrapper {
+        max-width: 35rem;
+        margin-inline: auto;
+        padding-block: 5rem;
+    }
 }
