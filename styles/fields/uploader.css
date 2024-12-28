@@ -3,6 +3,7 @@
     display: flex;
     gap: .75rem;
     align-items: center;
+    padding-block: .25rem;
     
     input {
         position: absolute;
@@ -15,6 +16,7 @@
 
     .input-box-wrapper {
         background-color: var(--shape-button);
+        border: 1px solid transparent;
         border-radius: .5rem;
         padding: .75rem;
 
@@ -32,19 +34,25 @@
         font-weight: 600;
     }
 
-    .no-file-selected, .filename {
+    span {
         font: var(--font-body-md);
-        color: var(--input-placeholder);
+        color: var(--text-body);
+
     }
 
-    .filename {
-        color: var(--text-body);
-        display: none;
+    .no-file-selected {
+        color: var(--input-placeholder);
     }
 
     &:hover {
         .input-box-wrapper {
             background-color: var(--shape-hover);
+        }
+    }
+
+    &:focus-within {
+        .input-box-wrapper {
+            border-color: var(--brand-light);
         }
     }
 }

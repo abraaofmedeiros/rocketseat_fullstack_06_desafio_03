@@ -74,6 +74,10 @@ input[type="datetime-local"] {
     }
 }
 
+.personalization {
+    row-gap: 1.75rem;
+}
+
 .radio-wrapper#type {
     border: 1px solid var(--input-stroke);
     background-color: var(--input-base);
@@ -159,11 +163,16 @@ textarea {
             font-size: 0;
         }
 
-        &:focus-within,
         &:hover {
             border-color: var(--shape-hover);
             outline-color: var(--shape-hover);
         }
+
+        &:focus-within {
+            border-color: var(--shape-hover);
+            outline-color: var(--brand-light);
+        }
+
 
         &:has(:checked) {
             outline-color: var(--brand-light);
@@ -212,9 +221,12 @@ textarea {
             margin: 0;
         }
 
-        &:focus-within,
         &:hover {
             outline-color: var(--shape-button);
+        }
+
+        &:focus-within {
+            outline-color: var(--brand-light);
         }
 
         &:has(:checked) {

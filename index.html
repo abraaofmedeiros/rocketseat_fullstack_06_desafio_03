@@ -272,7 +272,7 @@
                         </div>
 
                         <div class="flex">
-                            <div class="input-wrapper">
+                            <div class="input-wrapper flex-1">
                                 <label for="style">Estilo</label>
 
                                 <div class="toggle-container" id="style">
@@ -287,10 +287,10 @@
                                 </div>
                             </div>
 
-                            <div class="input-wrapper">
+                            <div class="input-wrapper flex-2">
                                 <label for="cover-photo">Foto de capa</label>
 
-                                <div class="upload-wrapper" >
+                                <div class="upload-wrapper">
                                     <input type="file" id="cover-photo">
 
                                     <div class="input-box-wrapper">
@@ -298,8 +298,7 @@
                                         <span>Selecionar</span>
                                     </div>
 
-                                    <span class="no-file-selected">Nenhum arquivo selecionado</span>
-                                    <span class="filename"></span>
+                                    <span id="upload-text" class="no-file-selected">Nenhum arquivo selecionado</span>
                                 </div>
                             </div>
                         </div>
@@ -308,6 +307,23 @@
             </div>
         </main>
     </div>
+
+    <script> 
+        const coverPhotoInputElement = document.getElementById('cover-photo');
+        const textElement = document.getElementById('upload-text');
+        console.log(textElement)
+
+        coverPhotoInputElement.addEventListener('change', () => {
+            if(coverPhotoInputElement.files.length > 0) {
+                console.log(coverPhotoInputElement.files[0].name)
+                textElement.textContent = coverPhotoInputElement.files[0].name
+                textElement.classList.remove('no-file-selected')
+            } else {
+                textElement.textContent = 'Nenhum arquivo selecionado';
+                textElement.classList.add('no-file-selected')
+            }
+        });
+    </script>
 </body>
 
 </html>
