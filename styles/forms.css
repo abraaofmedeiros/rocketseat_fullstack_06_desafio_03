@@ -57,8 +57,8 @@ textarea:focus {
     color: var(--text-heading);
 }
 
-input:invalid {
-    border-color: var(--color-feedback-danger);
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: var(--feedback-danger);
 }
 
 input[type="datetime-local"] {
@@ -232,6 +232,42 @@ textarea {
         &:has(:checked) {
             border-color: var(--brand-light);
             outline-color: var(--brand-light);
+        }
+    }
+}
+
+.button-wrapper {
+    display: flex;
+
+    justify-content: end;
+
+    button {
+        all: unset;
+
+        background-color: var(--brand-dark);
+        border-radius: .5rem;
+        padding: .875rem 1.25rem;
+
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+
+        border: 3px solid transparent;
+
+        span {
+            color: var(--text-heading);
+            font: var(--font-body-md);
+            font-weight: 600;
+        }
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--brand-mid);
+        }
+        
+        &:focus {
+            outline: 1px solid var(--brand-light);
         }
     }
 }
