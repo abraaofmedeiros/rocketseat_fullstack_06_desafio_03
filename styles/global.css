@@ -100,8 +100,8 @@ main {
     }
 
     #main-wrapper {
-        max-width: 35rem;
+        max-width: 40rem;
         margin-inline: auto;
-        padding-block: 5rem;
+        padding: 5rem 1rem;
     }
 }

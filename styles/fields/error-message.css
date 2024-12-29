@@ -1,0 +1,32 @@
+.error-message {
+    /* display: flex; */
+    align-items: center;
+    gap: .5rem;
+
+    margin-top: .5rem;
+
+    display: none;
+
+    .error-icon {
+        display: block;
+        background: url(../../assets/icons/circle-alert.svg);
+        width: 1rem;
+        height: 1rem;
+    }
+
+    span {
+        color: var(--feedback-danger);
+    }
+}
+
+.input-wrapper, .textarea-wrapper {
+    &:has(input:invalid:not(:focus):not(:placeholder-shown)) {
+        .error-message {
+            display: flex;
+        }
+
+        input, textarea, .input-box-wrapper {
+            border-color: var(--feedback-danger);
+        }
+    }
+}

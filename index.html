@@ -41,20 +41,35 @@
                         <div class="input-wrapper">
                             <label for="title">Titulo</label>
 
-                            <input type="text" id="title" placeholder="Nome do evento">
+                            <input type="text" id="title" placeholder="Nome do evento" required>
+
+                            <div class="error-message">
+                                <i class="error-icon"></i>
+                                <span>Campo obrigatório</span>
+                            </div>
                         </div>
 
                         <div class="flex flex-wrap">
                             <div class="input-wrapper flex-1">
                                 <label for="datetime-start">Início</label>
 
-                                <input type="datetime-local" id="datetime-start">
+                                <input type="datetime-local" id="datetime-start" required>
+
+                                <div class="error-message">
+                                    <i class="error-icon"></i>
+                                    <span>Campo obrigatório</span>
+                                </div>
                             </div>
 
                             <div class="input-wrapper flex-1">
                                 <label for="datetime-end">Fim</label>
 
-                                <input type="datetime-local" id="datetime-end">
+                                <input type="datetime-local" id="datetime-end" required>
+
+                                <div class="error-message">
+                                    <i class="error-icon"></i>
+                                    <span>Campo obrigatório</span>
+                                </div>
                             </div>
                         </div>
 
@@ -101,7 +116,12 @@
                             <div class="input-wrapper flex-1">
                                 <label for="address">Local</label>
 
-                                <input type="text" placeholder="Link ou endereço">
+                                <input type="text" placeholder="Link ou endereço" required>
+
+                                <div class="error-message">
+                                    <i class="error-icon"></i>
+                                    <span>Campo obrigatório</span>
+                                </div>
                             </div>
                         </div>
 
@@ -109,7 +129,12 @@
                             <label for="description">Descrição</label>
 
                             <textarea name="description" id="description"
-                                placeholder="Escreva sobre os detalhes do evento" rows="5"></textarea>
+                                placeholder="Escreva sobre os detalhes do evento" rows="5" required></textarea>
+
+                            <div class="error-message">
+                                <i class="error-icon"></i>
+                                <span>Campo obrigatório</span>
+                            </div>
                         </div>
                     </fieldset>
 
@@ -291,7 +316,7 @@
                                 <label for="cover-photo">Foto de capa</label>
 
                                 <div class="upload-wrapper">
-                                    <input type="file" id="cover-photo">
+                                    <input type="file" id="cover-photo" required>
 
                                     <div class="input-box-wrapper">
                                         <img src="assets/icons/upload.svg" alt="Ícone de upload">
@@ -299,6 +324,11 @@
                                     </div>
 
                                     <span id="upload-text" class="no-file-selected">Nenhum arquivo selecionado</span>
+                                </div>
+
+                                <div class="error-message">
+                                    <i class="error-icon"></i>
+                                    <span>Campo obrigatório</span>
                                 </div>
                             </div>
                         </div>
@@ -315,19 +345,34 @@
                             <label for="name">Nome</label>
 
                             <input type="text" id="name" placeholder="Nome completo" required>
+
+                            <div class="error-message">
+                                <i class="error-icon"></i>
+                                <span>Campo obrigatório</span>
+                            </div>
                         </div>
 
-                        <div class="flex">
+                        <div class="flex flex-wrap">
                             <div class="input-wrapper flex-1">
                                 <label for="email">E-mail</label>
 
                                 <input type="email" id="email" placeholder="exemplo@email.com" required>
+
+                                <div class="error-message">
+                                    <i class="error-icon"></i>
+                                    <span>Campo obrigatório</span>
+                                </div>
                             </div>
 
                             <div class="input-wrapper flex-1">
                                 <label for="phone">Telefone</label>
 
                                 <input type="tel" placeholder="(99) 99999-9999" required>
+
+                                <div class="error-message">
+                                    <i class="error-icon"></i>
+                                    <span>Campo obrigatório</span>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
@@ -338,14 +383,15 @@
                                 <input type="checkbox" name="terms-and-privacy" id="terms-and-privacy" checked>
                             </div>
 
-                            <label for="terms-and-privacy">Li e concordo com os <strong>Termos e Condições</strong> e com a <strong>Política de Privacidade</strong></label>
+                            <label for="terms-and-privacy">Li e concordo com os <strong>Termos e Condições</strong> e
+                                com a <strong>Política de Privacidade</strong></label>
                         </div>
 
                         <div class="checkbox-wrapper">
                             <div class="checkbox-inner">
                                 <input type="checkbox" name="updates-email" id="updates-email" checked>
                             </div>
-                            
+
                             <label>Aceito receber atualizações e promoções por e-mail</label>
                         </div>
 
@@ -353,7 +399,7 @@
                             <div class="checkbox-inner">
                                 <input type="checkbox" name="updates-sms" id="updates-sms" checked>
                             </div>
-                            
+
                             <label>Aceito receber atualizações e promoções por SMS</label>
                         </div>
                     </div>
@@ -370,13 +416,13 @@
         </main>
     </div>
 
-    <script> 
+    <script>
         const coverPhotoInputElement = document.getElementById('cover-photo');
         const textElement = document.getElementById('upload-text');
         console.log(textElement)
 
         coverPhotoInputElement.addEventListener('change', () => {
-            if(coverPhotoInputElement.files.length > 0) {
+            if (coverPhotoInputElement.files.length > 0) {
                 console.log(coverPhotoInputElement.files[0].name)
                 textElement.textContent = coverPhotoInputElement.files[0].name
                 textElement.classList.remove('no-file-selected')
